@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site e-commerce</title>
+
+    <!-- Lien CDN font-awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+
+    <!-- Lien vers le fichier CSS personnalisé -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Accueil</a></li>
+                <li><a href="shop.html">Boutique</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Connexion</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="hero">
+        <h4>Offre de reprise</h4>
+        <h2>Offres exceptionnelles</h2>
+        <h1>Sur tous les produits</h1>
+        <p>Économisez plus avec des coupons & jusqu'à 70% de réduction !</p>
+        <button>Acheter maintenant</button>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="images/features/f1.png" alt="">
+            <h6>Livraison gratuite</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/features/f2.png" alt="">
+            <h6>Commande en ligne</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/features/f3.png" alt="">
+            <h6>Économisez de l'argent</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/features/f4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/features/f5.png" alt="">
+            <h6>Vente heureuse</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/features/f6.png" alt="">
+            <h6>Support 24/7</h6>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Produits en vedette</h2>
+        <p>Nouvelle collection estivale design moderne</p>
+        <div class="pro-container">
+            <!-- Répété pour chaque produit -->
+            <div class="pro">
+                <img src="images/products/f1.jpg" alt="">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>T-shirt Astronaute Cartoon</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>78 TND</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+            </div>
+            <!-- ... autres produits avec la même structure ... -->
+        </div>
+    </section>
+
+    <section id="banner" class="section-m1">
+        <h4>Services de réparation</h4>
+        <h2>Jusqu'à <span>70% de réduction</span> - Tous les T-shirts & Accessoires</h2>
+        <button class="normal">Découvrir plus</button>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Nouveautés</h2>
+        <p>Nouvelle collection estivale design moderne</p>
+        <!-- Structure identique pour les nouveaux produits -->
+    </section>
+
+    <section id="sm-banner" class="section-p1">
+        <div class="banner-box">
+            <h4>offres folles</h4>
+            <h2>achetez 1 obtenez 1 gratuit</h2>
+            <span>La meilleure robe classique en soldes chez cara</span>
+            <button class="white">En savoir plus</button>
+        </div>
+        <div class="banner-box">
+            <h4>printemps/été</h4>
+            <h2>prochaine saison</h2>
+            <span>La meilleure robe classique en soldes chez cara</span>
+            <button class="white">Collection</button>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="banner-box">
+            <h2>Soldes saisonnières</h2>
+            <h3>Collection hiver -50%</h3>
+        </div>
+        <div class="banner-box">
+            <h2>Nouvelle collection de chaussures</h2>
+            <h3>Printemps/Été 2023</h3>
+        </div>
+        <div class="banner-box">
+            <h2>T-SHIRTS</h2>
+            <h3>Nouveaux motifs tendance</h3>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Inscrivez-vous à la newsletter</h4>
+            <p>Recevez des mises à jour par e-mail sur notre boutique et <span>offres spéciales.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Votre adresse e-mail">
+            <button class="normal">S'inscrire</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Adresse :</strong> Tunisie, Ariana</p>
+            <p><strong>Téléphone :</strong> +216 97 841 437</p>
+            <p><strong>Horaires :</strong> 10h00 - 18h00, Lun - Sam</p>
+            <div class="follow">
+                <h4>Suivez-nous</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Sections À propos et Mon compte traduites -->
+        <div class="col install">
+            <h4>Installer l'application</h4>
+            <p>Disponible sur App Store et Google Play</p>
+            <div class="row">
+                <img src="images/pay/app.jpg" alt="">
+                <img src="images/pay/play.jpg" alt="">
+            </div>
+            <p>Passerelle de paiement sécurisée</p>
+            <img src="images/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>Tous droits réservés | &#169; 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

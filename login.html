@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site e-commerce</title>
+
+    <!-- Lien CDN font-awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- Liens CSS personnalisés -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <style>
+        body {
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+        }
+    
+        main {
+          flex: 1 0 auto;
+        }
+    
+        body {
+          background: #fff;
+        }
+    
+        .input-field input[type=date]:focus + label,
+        .input-field input[type=text]:focus + label,
+        .input-field input[type=email]:focus + label,
+        .input-field input[type=password]:focus + label {
+          color: #e91e63;
+        }
+    
+        .input-field input[type=date]:focus,
+        .input-field input[type=text]:focus,
+        .input-field input[type=email]:focus,
+        .input-field input[type=password]:focus {
+          border-bottom: 2px solid #e91e63;
+          box-shadow: none;
+        }
+      </style>
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="shop.html">Boutique</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <form class="col s12" method="post">
+        <div class='row'>
+          <div class='col s12'></div>
+        </div>
+      
+        <!-- Sélection du rôle -->
+        <div class='row'>
+          <div class='input-field col s12'>
+            <select name="role" id="role">
+              <option value="" disabled selected>Choisissez votre rôle</option>
+              <option value="admin">Admin</option>
+              <option value="user">Utilisateur</option>
+              <option value="buyer">Acheteur</option>
+            </select>
+            <label for="role">Sélectionnez un rôle</label>
+          </div>
+        </div>
+      
+        <!-- Champ email -->
+        <div class='row'>
+          <div class='input-field col s12'>
+            <input class='validate' type='email' name='email' id='email' />
+            <label for='email'>Entrez votre email</label>
+          </div>
+        </div>
+      
+        <!-- Champ mot de passe -->
+        <div class='row'>
+          <div class='input-field col s12'>
+            <input class='validate' type='password' name='password' id='password' />
+            <label for='password'>Entrez votre mot de passe</label>
+          </div>
+          <label style='float: right;'>
+            <a class='pink-text' href='#!'><b>Mot de passe oublié ?</b></a>
+          </label>
+        </div>
+      
+        <br />
+        <center>
+          <div class='row'>
+            <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Se connecter</button>
+          </div>
+        </center>
+      </form>
+      
+      <!-- Script d'initialisation du dropdown -->
+      <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+          var elems = document.querySelectorAll('select');
+          var instances = M.FormSelect.init(elems);
+        });
+      </script>
+      
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Adresse :</strong> Tunisie, Ariana</p>
+            <p><strong>Téléphone :</strong> +216 97 841 437</p>
+            <p><strong>Horaires :</strong> 10h00 - 18h00, Lun - Sam</p>
+            <div class="follow">
+                <h4>Suivez-nous</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>À propos</h4>
+            <a href="#">À propos de nous</a>
+            <a href="#">Informations de livraison</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions générales</a>
+            <a href="#">Contactez-nous</a>
+        </div>
+        <div class="col">
+            <h4>Mon compte</h4>
+            <a href="#">Se connecter</a>
+            <a href="#">Voir le panier</a>
+            <a href="#">Ma liste de souhaits</a>
+            <a href="#">Suivre ma commande</a>
+            <a href="#">Aide</a>
+        </div>
+        <div class="col install">
+            <h4>Installer l'application</h4>
+            <p>Disponible sur App Store et Google Play</p>
+            <div class="row">
+                <img src="images/pay/app.jpg" alt="">
+                <img src="images/pay/play.jpg" alt="">
+            </div>
+            <p>Passerelle de paiement sécurisée</p>
+            <img src="images/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>Tous droits réservés | &#169; 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site e-commerce</title>
+
+    <!-- Lien CDN font-awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!-- Liens CSS personnalisés -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <style>
+        body {
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+        }
+    
+        main {
+          flex: 1 0 auto;
+        }
+    
+        body {
+          background: #fff;
+        }
+    
+        .input-field input[type=date]:focus + label,
+        .input-field input[type=text]:focus + label,
+        .input-field input[type=email]:focus + label,
+        .input-field input[type=password]:focus + label {
+          color: #e91e63;
+        }
+    
+        .input-field input[type=date]:focus,
+        .input-field input[type=text]:focus,
+        .input-field input[type=email]:focus,
+        .input-field input[type=password]:focus {
+          border-bottom: 2px solid #e91e63;
+          box-shadow: none;
+        }
+      </style>
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="shop.html">Boutique</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <form class="col s12" method="post">
+        <div class='row'>
+          <div class='col s12'></div>
+        </div>
+      
+        <!-- Sélection du rôle -->
+        <div class='row'>
+          <div class='input-field col s12'>
+            <select name="role" id="role">
+              <option value="" disabled selected>Choisissez votre rôle</option>
+              <option value="admin">Admin</option>
+              <option value="user">Utilisateur</option>
+              <option value="buyer">Acheteur</option>
+            </select>
+            <label for="role">Sélectionnez un rôle</label>
+          </div>
+        </div>
+      
+        <!-- Champ email -->
+        <div class='row'>
+          <div class='input-field col s12'>
+            <input class='validate' type='email' name='email' id='email' />
+            <label for='email'>Entrez votre email</label>
+          </div>
+        </div>
+      
+        <!-- Champ mot de passe -->
+        <div class='row'>
+          <div class='input-field col s12'>
+            <input class='validate' type='password' name='password' id='password' />
+            <label for='password'>Entrez votre mot de passe</label>
+          </div>
+          <label style='float: right;'>
+            <a class='pink-text' href='#!'><b>Mot de passe oublié ?</b></a>
+          </label>
+        </div>
+      
+        <br />
+        <center>
+          <div class='row'>
+            <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Se connecter</button>
+          </div>
+        </center>
+      </form>
+      
+      <!-- Script d'initialisation du dropdown -->
+      <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+          var elems = document.querySelectorAll('select');
+          var instances = M.FormSelect.init(elems);
+        });
+      </script>
+      
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Adresse :</strong> Tunisie, Ariana</p>
+            <p><strong>Téléphone :</strong> +216 97 841 437</p>
+            <p><strong>Horaires :</strong> 10h00 - 18h00, Lun - Sam</p>
+            <div class="follow">
+                <h4>Suivez-nous</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>À propos</h4>
+            <a href="#">À propos de nous</a>
+            <a href="#">Informations de livraison</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions générales</a>
+            <a href="#">Contactez-nous</a>
+        </div>
+        <div class="col">
+            <h4>Mon compte</h4>
+            <a href="#">Se connecter</a>
+            <a href="#">Voir le panier</a>
+            <a href="#">Ma liste de souhaits</a>
+            <a href="#">Suivre ma commande</a>
+            <a href="#">Aide</a>
+        </div>
+        <div class="col install">
+            <h4>Installer l'application</h4>
+            <p>Disponible sur App Store et Google Play</p>
+            <div class="row">
+                <img src="images/pay/app.jpg" alt="">
+                <img src="images/pay/play.jpg" alt="">
+            </div>
+            <p>Passerelle de paiement sécurisée</p>
+            <img src="images/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>Tous droits réservés | &#169; 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
